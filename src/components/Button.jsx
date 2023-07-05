@@ -9,12 +9,8 @@ const Button = ({ value, btnType, col }) => (
 
 Button.propTypes = {
   value: PropTypes.string.isRequired,
-  btnType: PropTypes.string,
-  col: PropTypes.number,
+  btnType: PropTypes.string.isRequired,
+  col: PropTypes.number.isRequired,
 };
 
-Button.defaultProps = {
-  btnType: 'light',
-  col: 3,
-};
 export default Button;
