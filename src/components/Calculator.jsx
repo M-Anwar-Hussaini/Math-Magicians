@@ -1,42 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
-import Calculation from './CalculationBar';
-import '../css/bootstrap.min.css';
-import '../css/Container.css';
+import CalculationBar from './CalculationBar';
+import calculate from '../logic/calculate';
 
-const Container = () => (
-  <div className="Container row border border-warning p-2 rounded">
-    {/* Calculation display */}
-    <Calculation />
-    {/* Row 1 */}
-    <Button value="AC" />
-    <Button value="+/-" />
-    <Button value="%" />
-    <Button value="÷" btnType="warning" />
+const style = {
+  width: '300px',
+  margin: '32px auto',
+};
 
-    {/* Row 2 */}
-    <Button value="7" />
-    <Button value="8" />
-    <Button value="9" />
-    <Button value="*" btnType="warning" />
+const symbols = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
 
-    {/* Row 3 */}
-    <Button value="4" />
-    <Button value="5" />
-    <Button value="6" />
-    <Button value="-" btnType="warning" />
+const rightButtons = ['÷', 'x', '-', '+', '='];
+const initObject = {
+  total: null,
+  next: null,
+  operation: null,
+};
 
-    {/* Row 3 */}
-    <Button value="1" />
-    <Button value="2" />
-    <Button value="3" />
-    <Button value="+" btnType="warning" />
+const Calculator = () => {
+  const [currentData, refactorCurrentDate] = useState(initObject);
+  const { total, next } = currentData;
+  const displayValue = next || total || 0;
 
-    {/* Row 4 */}
-    <Button value="0" col={6} />
-    <Button value="." />
-    <Button value="=" btnType="warning" />
-  </div>
-);
+  const btnClickHandler = (value) => {
+    refactorCurrentDate((curData) => calculate(curData, value));
+  };
 
-export default Container;
+  // Button Elements
+  const elements = symbols.map((btnName) => {
+    let btnType = 'outline-success';
+    if (btnName === 'AC') {
+      btnType = 'danger';
+    } else if (rightButtons.includes(btnName)) {
+      btnType = 'success';
+    }
+    return <Button value={btnName} col={btnName === '0' ? 6 : 3} key={btnName} btnType={btnType} click={() => btnClickHandler(btnName)} />;
+  });
+
+  return (
+    <div className="row border border-success p-2 rounded" style={style}>
+      <CalculationBar value={displayValue} />
+      {elements}
+    </div>
+  );
+};
+
+export default Calculator;
