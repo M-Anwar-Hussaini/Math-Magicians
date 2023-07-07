@@ -3,12 +3,27 @@ import Button from './Button';
 import CalculationBar from './CalculationBar';
 import calculate from '../logic/calculate';
 
-const style = {
-  width: '300px',
-  margin: '32px auto',
-};
-
-const symbols = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+const symbols = [
+  'AC',
+  '+/-',
+  '%',
+  '÷',
+  '7',
+  '8',
+  '9',
+  'x',
+  '4',
+  '5',
+  '6',
+  '-',
+  '1',
+  '2',
+  '3',
+  '+',
+  '0',
+  '.',
+  '=',
+];
 
 const rightButtons = ['÷', 'x', '-', '+', '='];
 const initObject = {
@@ -34,12 +49,20 @@ const Calculator = () => {
     } else if (rightButtons.includes(btnName)) {
       btnType = 'success';
     }
-    return <Button value={btnName} col={btnName === '0' ? 6 : 3} key={btnName} btnType={btnType} click={() => btnClickHandler(btnName)} />;
+    return (
+      <Button
+        value={btnName}
+        col={btnName === '0' ? 6 : 3}
+        key={btnName}
+        btnType={btnType}
+        click={() => btnClickHandler(btnName)}
+      />
+    );
   });
 
   return (
-    <div className="row border border-success p-2 rounded" style={style}>
-      <CalculationBar value={displayValue} />
+    <div className="border border-success p-2 rounded">
+      <CalculationBar className="row" value={displayValue} />
       {elements}
     </div>
   );
