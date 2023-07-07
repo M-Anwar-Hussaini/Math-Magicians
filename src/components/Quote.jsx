@@ -7,6 +7,7 @@ const Quote = () => {
   const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
   const [hasError, setHasError] = useState(false);
+  const [showNew, setShowNew] = useState(false);
   useEffect(() => {
     const getQuote = async () => {
       setLoading(true);
@@ -26,11 +27,15 @@ const Quote = () => {
       setLoading(false);
     };
     getQuote();
-  }, [setLoading, setQuote, setAuthor]);
+  }, [setLoading, setQuote, setAuthor, showNew]);
+
+  const changeQuoteHandler = () => {
+    setShowNew(!showNew);
+  };
 
   if (loading) {
     return (
-      <figure className="border border-success rounded p-2">Loading</figure>
+      <figure className="border border-success rounded p-2">Loading...</figure>
     );
   }
 
@@ -49,6 +54,13 @@ const Quote = () => {
         <strong>By: </strong>
         {author}
       </figcaption>
+      <button
+        type="button"
+        className="btn btn-outline-success ms-auto"
+        onClick={changeQuoteHandler}
+      >
+        Change quote
+      </button>
     </figure>
   );
 };
