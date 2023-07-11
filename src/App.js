@@ -1,18 +1,23 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Calculator from './components/Calculator';
 import Quote from './components/Quote';
+import Navigator from './components/Navigator';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
-const Home = () => (
-  <div className="container">
-    <div className="row g-3 mt-2">
-      <div className="col col-12 col-md-6">
-        <Calculator />
-      </div>
-      <div className="col col-12 col-md-6">
-        <Quote />
-      </div>
-    </div>
-  </div>
+const App = () => (
+  <>
+    <Navigator />
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/quotes" element={<Quote />} />
+    </Routes>
+
+    <Footer />
+  </>
 );
 
-export default Home;
+export default App;

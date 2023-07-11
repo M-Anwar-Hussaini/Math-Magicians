@@ -35,19 +35,21 @@ const Quote = () => {
 
   if (loading) {
     return (
-      <figure className="border border-success rounded p-2">Loading...</figure>
+      <figure className="border border-success rounded p-2 box">
+        Loading...
+      </figure>
     );
   }
 
   if (hasError) {
     return (
-      <figure className="border border-success rounded p-2">
+      <figure className="border border-success rounded p-2 box">
         Something went wrong
       </figure>
     );
   }
   return (
-    <figure className="border border-success rounded p-2">
+    <figure className="border border-success rounded p-2 box">
       <h2 className="alert alert-success">Useful Quote</h2>
       <p className="fst-italic">{`"${quote}"`}</p>
       <figcaption className="text-end text-muted">
