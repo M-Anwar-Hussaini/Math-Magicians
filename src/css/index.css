@@ -1,0 +1,18 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  background-color: #eff;
+  padding: 32px;
+}
+
+.big-container {
+  max-width: 800px !important;
+}
+
+.box {
+  max-width: 400px;
+  margin: auto auto;
+}
