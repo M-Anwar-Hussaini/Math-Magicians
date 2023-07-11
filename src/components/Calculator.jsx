@@ -61,7 +61,7 @@ const Calculator = () => {
   });
 
   return (
-    <div className="border border-success p-2 rounded">
+    <div className="border border-success p-2 rounded box">
       <CalculationBar className="row" value={displayValue} />
       {elements}
     </div>
