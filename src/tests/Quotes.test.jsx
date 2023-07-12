@@ -14,5 +14,4 @@ describe('Quotes', () => {
     const loading = quotes.getByText('Loading...');
     expect(loading).toBeInTheDocument();
   });
-  
 });
