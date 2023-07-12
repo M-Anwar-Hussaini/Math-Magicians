@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculate renders Calculate component 1`] = `
+<div>
+  <div
+    class="border border-success p-2 rounded box"
+  >
+    <input
+      class="col-12 form-control mb-2 text-end"
+      disabled=""
+      readonly=""
+      type="text"
+      value="0"
+    />
+    <button
+      class="border col-3 btn btn-danger"
+      type="button"
+    >
+      AC
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      +/-
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      %
+    </button>
+    <button
+      class="border col-3 btn btn-success"
+      type="button"
+    >
+      ÷
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      7
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      8
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      9
+    </button>
+    <button
+      class="border col-3 btn btn-success"
+      type="button"
+    >
+      x
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      4
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      5
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      6
+    </button>
+    <button
+      class="border col-3 btn btn-success"
+      type="button"
+    >
+      -
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      3
+    </button>
+    <button
+      class="border col-3 btn btn-success"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="border col-6 btn btn-outline-success"
+      type="button"
+    >
+      0
+    </button>
+    <button
+      class="border col-3 btn btn-outline-success"
+      type="button"
+    >
+      .
+    </button>
+    <button
+      class="border col-3 btn btn-success"
+      type="button"
+    >
+      =
+    </button>
+  </div>
+</div>
+`;
