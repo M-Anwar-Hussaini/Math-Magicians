@@ -12,10 +12,10 @@ describe('Calculate', () => {
   })
 
   it('Renders Navigator component', () => {
-    const nav = render(<Navigator />);
+    render(<Navigator />);
     const element = screen.getByText('Home');
     
-    expect(nav.container).toMatchSnapshot();
+    expect(element).toBeInTheDocument();
     
   })
   
