@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Calculate renders Calculate component 1`] = `
+exports[`Calculate Renders Calculate component 1`] = `
 <div>
   <div
     class="border border-success p-2 rounded box"

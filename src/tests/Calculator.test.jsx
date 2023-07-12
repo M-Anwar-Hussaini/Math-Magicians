@@ -3,21 +3,31 @@ import {fireEvent, render} from '@testing-library/react';
 import Calculator from '../components/Calculator';
 
 describe('Calculate', () => {
-  it('renders Calculate component', () => {
+  it('Renders Calculate component', () => {
     const calculator = render(<Calculator />);
     
     expect(calculator.container).toMatchSnapshot();
     
   })
 
-  it('displaying button by clicking event', () => {
-    const calc = render (<Calculator />);
-    const display = calc.container.querySelector('.form-control');
+  it('Initial display', () => {
+    const calculator = render(<Calculator />);
+    const display = calculator.container.querySelector('.form-control');
+  
+    expect(display.value).toBe('0');
+  });
+  
+  it('Display the result of an operation', () => {
+    const calculator = render(<Calculator />);
+    const display = calculator.container.querySelector('.form-control');
+  
+    fireEvent.click(calculator.getByText('5'))
+    fireEvent.click(calculator.getByText('+'))
+    fireEvent.click(calculator.getByText('8'))
+    fireEvent.click(calculator.getByText('5'))
+    fireEvent.click(calculator.getByText('='))
 
-    fireEvent.click(calc.getByText('9'));
-
-    expect(display.innerHTML).toEqual('')
-  })
-
+    expect(display.value).toBe('90');
+  });
 
 })
