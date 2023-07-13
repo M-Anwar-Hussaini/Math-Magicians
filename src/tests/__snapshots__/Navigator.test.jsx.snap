@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculate Renders Navigator component 1`] = `
+<div>
+  <div
+    class="container py-4 bg-success mb-2 rounded"
+  >
+    <nav
+      class="d-flex justify-content-between align-items-center"
+    >
+      <a
+        class="btn btn-light"
+        href="/"
+      >
+        <h1>
+          Math Magicians
+        </h1>
+      </a>
+      <div
+        class="list-group list-group-horizontal"
+      >
+        <a
+          class="list-group-item list-group-item-action"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="list-group-item list-group-item-action"
+          href="/calculator"
+        >
+          Calculator
+        </a>
+        <a
+          class="list-group-item list-group-item-action"
+          href="/quotes"
+        >
+          Quotes
+        </a>
+      </div>
+    </nav>
+  </div>
+</div>
+`;
