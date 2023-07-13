@@ -28,4 +28,11 @@ describe('Test the operate function', () => {
     const result = 4;
     expect(input).toBeCloseTo(result);
   });
+
+  // Test % operator
+  test('(9 % 5) should  be equal to 4', () => {
+    const input = operate(9, 5, '%');
+    const result = '4';
+    expect(input).toBe(result);
+  });
 });
